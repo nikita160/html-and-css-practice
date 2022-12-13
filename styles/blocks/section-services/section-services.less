@@ -1,0 +1,25 @@
+@service-padding-s: 15px;
+@service-padding-m: 35px;
+@service-padding-l: 175px;
+
+.section-services {
+  background-color: #eee;
+  padding: 40px 145px 40px 175px;
+  display: flex;
+
+  @media @screen-only-m {
+    padding: 30px 20px 30px 35px;
+  }
+
+  @media @screen-only-s {
+    padding: 30px 15px 30px 34px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__container {
+    @media @screen-gt-s {
+      flex-basis: 33.3%;
+    }
+  }
+}

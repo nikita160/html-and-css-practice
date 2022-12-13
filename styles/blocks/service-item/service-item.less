@@ -1,0 +1,44 @@
+.service-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  @media @screen-only-s {
+    gap: 20px;
+  }
+
+  @media @screen-only-m {
+    max-width: 210px;
+    gap: 10px;
+  }
+
+  @media @screen-only-l {
+    max-width: 240px;
+    gap: 30px;
+  }
+
+  &__image-container {
+    height: 40px;
+
+    @media @screen-gt-m {
+      height: 50px;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    display: block;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    color: #333333;
+    height: 40px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
