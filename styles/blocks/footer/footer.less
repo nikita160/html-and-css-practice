@@ -1,24 +1,24 @@
 .footer {
   background-color: #212122;
-  padding: 40px 175px 35px;
-
-  @media @screen-only-m {
-    padding: 30px 35px 29px;
-  }
-
-  @media @screen-only-s {
-    padding: 30px 15px 22px;
-  }
 
   &__content {
-    position: relative;
     box-sizing: border-box;
-    height: 80px;
     border-bottom: solid 1px #666666;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
 
     @media @screen-only-s {
-      height: auto;
-      padding-bottom: 30px;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @media @screen-only-m {
+      justify-content: space-between;
+    }
+
+    @media @screen-gt-m {
+      padding-top: 40px;
     }
   }
 
@@ -26,62 +26,59 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    position: absolute;
-    left: 0;
     display: flex;
     gap: 15;
 
     @media @screen-gt-s {
-      top: 4px;
+      margin-top: 2px;
     }
 
-    @media @screen-only-s {
-      position: static;
+    @media @screen-gt-m {
+      margin-top: 4px;
     }
   }
 
   &__app {
-    position: absolute;
     display: flex;
     gap: 8px;
 
-    @media @screen-only-l {
-      left: 50%;
-      transform: translate(-50%, 0);
+    @media @screen-gt-s {
+      margin-left: 130px;
     }
+  }
 
-    @media @screen-only-m {
-      right: 0;
-    }
+  &__fill {
+    display: none;
+    flex-grow: 1;
 
-    @media @screen-only-s {
-      position: static;
-      margin-top: 30px;
+    @media @screen-gt-m {
+      display: block;
     }
   }
 
   &__logo {
+    text-decoration: none;
     display: none;
+    padding: 0;
 
     @media @screen-gt-m {
       display: block;
-      position: absolute;
-      right: 0;
-      top: 3px;
+      margin-top: 3px;
     }
   }
 
   &__copyright {
-    margin-top: 30px;
     color: #999999;
-    font-family: "Arial";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    padding-top: 15px;
+    padding-bottom: 22px;
 
-    @media @screen-only-s {
-      margin-top: 15px;
+    @media @screen-gt-s {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @media @screen-gt-s {
+      padding-bottom: 35px;
     }
   }
 }
